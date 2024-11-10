@@ -1,3 +1,3 @@
-import FccButton from "./components/ButtonComponet.vue";
+import VueCountryCode from "./components/VueCountryCode.vue";
 
-export { FccButton };
+export { VueCountryCode };
