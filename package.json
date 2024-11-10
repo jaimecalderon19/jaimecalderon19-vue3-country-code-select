@@ -21,7 +21,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tuusuario/vue3-country-select.git"
+    "url": "git+https://github.com/jaimecalderon19/vue3-country-select"
   },
   "peerDependencies": {
     "vue": "^3.0.0"

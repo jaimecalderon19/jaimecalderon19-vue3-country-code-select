@@ -16,8 +16,8 @@ A Vue 3 component for country selection with TypeScript support. This component 
 
 ## Preview
 
-![Country Select Default View](public/image1.png)
-![Country Select Search View](public/image2.png)
+![Country Select Default View](https://raw.githubusercontent.com/jaimecalderon19/vue3-country-select/refs/heads/main/public/image1.png)
+![Country Select Search View](https://raw.githubusercontent.com/jaimecalderon19/vue3-country-select/refs/heads/main/public/image2.png)
 
 
 ## Installation
