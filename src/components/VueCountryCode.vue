@@ -197,7 +197,7 @@ const reset = () => {
 }
 
 // Lifecycle hooks and watchers
-onMounted(() => {
+onMounted(async () => {
   // Initialize country
   if (props.defaultCountry) {
     const defaultCountry = findCountry(props.defaultCountry)
@@ -211,11 +211,12 @@ onMounted(() => {
   activeCountry.value = findCountry(props.preferredCountries[0]) || filteredCountries.value[0]
 
   if (!props.disabledFetchingCountry) {
-    getCountry().then(res => {
-      const country = findCountry(res) || activeCountry.value
-      choose(country)
-    })
+    const countryCurrent = await getCountry();
+
+    const country = findCountry(countryCurrent) || activeCountry.value
+    choose(country)
   }
+
 })
 
 watch(() => props.defaultCountry, (newVal) => {
@@ -262,7 +263,7 @@ watch(() => props.defaultCountry, (newVal) => {
               class="vti__flag"
               :class="pb.iso2.toLowerCase()"
           />
-          <strong>{{ pb.name }}</strong>
+          <strong style="font-weight: 500">{{ pb.name }}</strong>
           <span v-if="dropdownOptions && !dropdownOptions.disabledDialCode">
             +{{ pb.dialCode }}
           </span>
